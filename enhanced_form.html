@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced HTML5 Page with Form</title>
+</head>
+<body>
+  <h1>Welcome to My Enhanced HTML5 Page</h1>
+
+  <h2>1. Lists</h2>
+  <p>Here are some East African Countries:</p>
+  <ul>
+    <li>Burundi</li>
+    <li>Kenya</li>
+    <li>Rwanda</li>
+    <li>Tanzania</li>
+    <li>Uganda</li>
+  </ul>
+
+  <h2>2. Table</h2>
+  <p>Comparison of East African Countries by land area:</p>
+  <table border="1" summary="Comparison of East African countries by land area">
+    <thead>
+      <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Name</th>
+        <th scope="col">Size (Sq.Km)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Tanzania</td>
+        <td>947,300</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Kenya</td>
+        <td>580,367</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Uganda</td>
+        <td>241,038</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Burundi</td>
+        <td>27,834</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Rwanda</td>
+        <td>26,798</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Media</h2>
+  <p>Image, Audio, and Video:</p>
+  <img src="/Assets/Map-of-East-Africa-.png" alt="Map of East Africa" />
+  <br><br>
+  <audio controls>
+    <source src="/Assets/East African Audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <br><br>
+  <video width="400" controls>
+    <source src="/Assets/East African Anthem English & Swahili lyrics Jumuiya Afrika Mashariki.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+
+  <h2>4. Registration Form</h2>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Jane" required minlength="2" maxlength="50">
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Doe" required minlength="2" maxlength="50">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="jane.doe@example.com" autocomplete="email" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label>Gender:</label>
+      <label><input type="radio" id="female" name="gender" value="Female" required> Female</label>
+      <label><input type="radio" id="male" name="gender" value="Male"> Male</label>
+      <label><input type="radio" id="other" name="gender" value="Other"> Other</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Account Details</legend>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" 
+             required minlength="8" 
+             pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}" 
+             title="At least 8 characters, including uppercase, lowercase, number, and symbol">
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact Information</legend>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" 
+             placeholder="+256 700 000000" 
+             pattern="^\+?[0-9\s()-]{7,20}$" required>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">Select your country</option>
+        <option>Uganda</option>
+        <option>Kenya</option>
+        <option>Tanzania</option>
+        <option>Rwanda</option>
+        <option>Burundi</option>
+        <option>Other</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Agreements</legend>
+      <label>
+        <input type="checkbox" name="terms" required> I agree to the Terms and Privacy Policy
+      </label>
+    </fieldset>
+
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
